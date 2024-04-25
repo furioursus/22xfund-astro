@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/menu-logo.png";
+import Team from "./Team.astro";
+---
+
+<a
+	id="about-us"
+	class="relative block invisible top-[-5rem]"
+></a>
+<div
+	class="relative z-0 px-2 pt-16 mx-auto -mt-1 bg-top bg-no-repeat max-w-8xl about-us-bg bg-pickled-bluewood"
+>
+	<div
+		class="max-w-3xl px-6 pt-2 pb-12 mx-auto bg-white rounded shadow-lg lg:max-w-4xl lg:flex lg:p-20"
+	>
+		<figure class="block h-10 lg:h-16 lg:mr-10">
+			<Image
+				src={Logo}
+				alt="22X Fund Logo"
+				class="block h-10 lg:h-16 w-auto"
+			/>
+		</figure>
+		<div class="flex-1">
+			<h2 class="mt-2 text-3xl font-light tracking-wide uppercase lg:text-4xl">
+				About Us
+			</h2>
+			<p class="text-sm font-normal leading-loose lg:text-base">
+				22X is the brainchild of startup founders from Batch 22 of 500 Startups
+				Accelerator program. Like most great ideas, what started as spitballing
+				over beers snowballed into a batch-wide effort that sought to create a
+				tokenized investment offering. Eschewing traditional wisdom on how to
+				raise funding for their startups, the founders saw a bigger opportunity
+				to raise capital together through an ICO. Through their partnership with
+				Securitize Capital LLC, 22X Fund was born. The startups are represented
+				by one token that seeks to give investors more liquidity and better
+				returns.
+			</p>
+		</div>
+	</div>
+	<Team />
+</div>
+
+<style>
+	.about-us-bg {
+		background-image: url("/about-us-edge.svg");
+		background-position: top;
+		background-size: 108%;
+		background-repeat: no-repeat;
+	}
+</style>

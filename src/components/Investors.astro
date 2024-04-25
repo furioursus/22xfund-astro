@@ -1,0 +1,130 @@
+---
+import InvestorCard from "./InvestorCard.astro";
+let investors = [
+	{
+		title: "500Startups",
+		imagePath: "/src/assets/logos/500startups.png",
+	},
+	{
+		title: "Accenture",
+		imagePath: "/src/assets/logos/accenture.png",
+	},
+	{
+		title: "Aenetworks",
+		imagePath: "/src/assets/logos/aenetworks.png",
+	},
+	{
+		title: "Anthemis",
+		imagePath: "/src/assets/logos/anthemis.png",
+	},
+	{
+		title: "BWM",
+		imagePath: "/src/assets/logos/bmw.png",
+	},
+	{
+		title: "Buzzfeed",
+		imagePath: "/src/assets/logos/buzzfeed.png",
+	},
+	{
+		title: "Cornerstone",
+		imagePath: "/src/assets/logos/cornerstone.png",
+	},
+	{
+		title: "Deutschebank",
+		imagePath: "/src/assets/logos/deutschebank.png",
+	},
+	{
+		title: "Dubaigov",
+		imagePath: "/src/assets/logos/dubaigov.png",
+	},
+	{
+		title: "Echoing",
+		imagePath: "/src/assets/logos/echoing.png",
+	},
+	{
+		title: "Experian",
+		imagePath: "/src/assets/logos/experian.png",
+	},
+	{
+		title: "F2",
+		imagePath: "/src/assets/logos/f2.png",
+	},
+	{
+		title: "Growthx",
+		imagePath: "/src/assets/logos/growthx.png",
+	},
+	{
+		title: "HSN",
+		imagePath: "/src/assets/logos/hsn.png",
+	},
+	{
+		title: "Kentucky Innovation",
+		imagePath: "/src/assets/logos/kentuckyinnovation.png",
+	},
+	{
+		title: "Linkedin",
+		imagePath: "/src/assets/logos/linkedin.png",
+	},
+	{
+		title: "Meli",
+		imagePath: "/src/assets/logos/meli.png",
+	},
+	{
+		title: "Mercadolibre",
+		imagePath: "/src/assets/logos/mercadolibre.png",
+	},
+	{
+		title: "Miami Hospital",
+		imagePath: "/src/assets/logos/miami-hospital.png",
+	},
+	{
+		title: "NyAngels",
+		imagePath: "/src/assets/logos/nyangels.png",
+	},
+	{
+		title: "Singularity",
+		imagePath: "/src/assets/logos/singularity.png",
+	},
+	{
+		title: "TechCrunch",
+		imagePath: "/src/assets/logos/techcrunch.png",
+	},
+	{
+		title: "Walmart",
+		imagePath: "/src/assets/logos/walmart.png",
+	},
+	{
+		title: "Wayra",
+		imagePath: "/src/assets/logos/wayra.png",
+	},
+];
+---
+
+<a
+	id="investors"
+	class="anchor-link"
+></a>
+<div class="py-16 bg-white -mt-1 max-w-5xl mx-auto">
+	<div class="container mx-auto px-8 text-center">
+		<h2 class="text-3xl md:text-4xl font-light uppercase tracking-wide">
+			Our Investors
+		</h2>
+		<p class="my-4 max-w-sm mx-auto">
+			Startups in the 22X Fund offering have collectively raised over $22MM.
+			Their inverstors include 500 Startups Accelerator and leading institutions
+			and angels from:
+		</p>
+		<div class="px-4">
+			<div class="flex flex-wrap mt-8 -mx-4 justify-center">
+				{
+					investors.map(({ title, imagePath }) => (
+						<InvestorCard
+							title={title}
+							imagePath={imagePath}
+						/>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</div>

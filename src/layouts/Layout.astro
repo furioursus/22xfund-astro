@@ -1,0 +1,131 @@
+---
+import Navigation from "../components/Navigation.astro";
+export interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html
+	class="scroll-smooth"
+	lang="en"
+>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="ie=edge"
+		/>
+		<link
+			rel="shortcut icon"
+			href="/favicon.ico"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600"
+			rel="stylesheet"
+		/>
+		<meta
+			name="generator"
+			content={Astro.generator}
+		/>
+		<title>{title}</title>
+		<meta
+			name="description"
+			content={description}
+		/>
+		<meta
+			property="og:title"
+			content={title}
+		/>
+		<meta
+			property="og:description"
+			content={description}
+		/>
+		<meta
+			property="og:type"
+			content="website"
+		/>
+		<meta
+			property="og:url"
+			content="https://22xfund.com"
+		/>
+	</head>
+	<body class="pt-20 font-sans font-light leading-normal text-pickled-bluewood">
+		<a id="top"></a>
+		<Navigation />
+		<main>
+			<slot />
+		</main>
+		<script>
+			var menuButton = document.getElementById("mobile-nav-trigger");
+			var menu = document.getElementById("mobile-nav");
+			var links = menu ? menu.querySelectorAll("#mobile-nav a") : [];
+
+			if (menuButton) {
+				menuButton.addEventListener("click", function (e) {
+					e.preventDefault();
+					console.log(links);
+					if (menu) {
+						menu.classList.toggle("open");
+					}
+				});
+			}
+
+			for (let index = 0; index < links.length; index++) {
+				const element = links[index];
+				element.addEventListener("click", function () {
+					if (menu) {
+						menu.classList.remove("open");
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	.anchor-link {
+		position: relative;
+		display: block;
+		visibility: hidden;
+		top: -5rem;
+	}
+
+	.slide-mobile-nav {
+		transform: translateY(-100%);
+		transition: transform 0.3s;
+	}
+
+	.slide-mobile-nav.open {
+		transform: translateY(5rem);
+	}
+
+	.legal-bg {
+		background-image: url("/assets/img/pickled-bluewood-edge-reverse.svg");
+		background-position: top;
+		background-size: 105%;
+		background-repeat: no-repeat;
+		background-color: #fff;
+	}
+
+	.responsive-video {
+		overflow: hidden;
+		padding-bottom: 56.25%;
+		position: relative;
+		height: 0;
+	}
+
+	.responsive-video iframe {
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+	}
+</style>

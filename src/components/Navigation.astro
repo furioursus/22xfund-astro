@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import Logo from "/src/assets/menu-logo.png";
+import IconMenu from "/src/assets/icon-menu.png";
+let nav = [
+	{
+		name: "Companies",
+		link: "/#companies",
+	},
+	{
+		name: "About",
+		link: "/#about-us",
+	},
+	{
+		name: "Team",
+		link: "/#team",
+	},
+	{
+		name: "FAQ",
+		link: "/faq",
+	},
+	{
+		name: "Register Here",
+		link: "https://id.securitize.io/#/authorize?issuerId=9808a8a7-6184-4a04-ba1f-5913ba93515b&scope=info%20details%20verification&registration=true&redirecturl=https://dashboard.22xfund.com/%23/authorize",
+	},
+	{
+		name: "Login",
+		link: "https://id.securitize.io/#/authorize?issuerId=9808a8a7-6184-4a04-ba1f-5913ba93515b&scope=info%20details%20verification&redirecturl=https://dashboard.22xfund.com/%23/authorize",
+	},
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-40 w-full bg-white">
+	<div
+		class="container relative z-50 flex items-center justify-between w-full p-4 mx-auto bg-white"
+	>
+		<a
+			href="#top"
+			class="block h-12"
+		>
+			<Image
+				src={Logo}
+				alt="22X Fund Logo"
+				class="h-12 w-12"
+			/>
+		</a><a
+			id="mobile-nav-trigger"
+			href=""
+			class="block p-2 bg-white rounded-sm md:hidden"
+		>
+			<Image
+				src={IconMenu}
+				alt="Mobile Navigation Button"
+				class="block h-4 w-4"
+			/>
+		</a>
+		<ul
+			class="justify-end flex-1 hidden text-sm font-semibold list-reset md:flex md:items-center"
+		>
+			{
+				nav.map(({ name, link }) => (
+					<li class="md:ml-4">
+						<a
+							href={link}
+							class="block px-6 py-3 no-underline uppercase text-pickled-bluewood md:p-0"
+						>
+							{name}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+	<div
+		id="mobile-nav"
+		class="absolute top-0 z-30 w-full duration-300 transform -translate-y-full bg-white md:hidden"
+	>
+		<div class="container py-3 mx-auto">
+			<ul class="block text-sm font-semibold list-reset">
+				{
+					nav.map(({ name, link }) => (
+						<li class="md:ml-4">
+							<a
+								href={link}
+								class="block px-6 py-3 no-underline uppercase text-pickled-bluewood md:p-0"
+							>
+								{name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</div>
+</nav>

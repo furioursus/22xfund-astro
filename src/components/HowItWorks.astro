@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+import HiWImage1 from "../assets/hw-1.png";
+import HiWImage2 from "../assets/hw-2.png";
+import HiWImage3 from "../assets/hw-3.png";
+import HiWImage4 from "../assets/hw-4.png";
+---
+
+<a
+	id="how-it-works"
+	class="relative block invisible top-[-5rem]"
+></a>
+<div class="relative z-10 py-12 mx-auto max-w-8xl bg-zircon how-it-works-bg">
+	<div class="max-w-5xl px-8 mx-auto">
+		<h2 class="text-3xl font-light tracking-wide text-center uppercase">
+			How it Works
+		</h2>
+		<div class="items-start mt-16 mb-32 md:mb-0 md:flex md:flex-row">
+			<div class="md:w-1/2 md:pr-32">
+				<h3 class="text-2xl font-light leading-tight md:pt-24">
+					Buy 22X Fund Tokens
+				</h3>
+				<p>
+					Send Ether, Bitcoin, Bitcoin Cash, or Fiat (USD,EUR) and receive 22X
+					Tokens.
+				</p>
+			</div>
+			<figure
+				class="relative block mt-8 md:w-1/2 md:mt-0 hiw-figure hiw-figure-1"
+			>
+				<Image
+					src={HiWImage1}
+					alt=""
+					class="block md:w-3/4"
+				/>
+			</figure>
+		</div>
+		<div class="my-32 md:my-0 md:flex md:flex-row-reverse">
+			<div class="md:w-1/2 md:pl-32">
+				<h3 class="text-2xl font-light leading-tight md:pt-24">
+					Benefit from Ownership in a Diverse Group of Startups
+				</h3>
+				<p>22X Fund holds up to 10% equity in each participating company.</p>
+			</div>
+			<figure class="relative block mt-8 md:w-1/2 hiw-figure hiw-figure-2">
+				<Image
+					src={HiWImage2}
+					alt=""
+					class="block md:w-3/4"
+				/>
+			</figure>
+		</div>
+		<div class="my-32 md:my-0 md:flex md:flex-row">
+			<div class="md:w-1/2 md:pr-32">
+				<h3 class="text-2xl font-light leading-tight md:pt-40">
+					Propel Startup Growth
+				</h3>
+				<p>
+					Proceeds from the fund are distributed pro rata to participating
+					companies capped at 1MM USD.
+				</p>
+			</div>
+			<figure class="relative block mt-8 md:w-1/2 hiw-figure hiw-figure-3">
+				<Image
+					src={HiWImage3}
+					alt=""
+					class="block md:w-3/4"
+				/>
+			</figure>
+		</div>
+		<div
+			class="mt-32 mb-0 md:flex md:flex-col-reverse md:my-0 md:w-64 md:px-2 md:mx-auto"
+		>
+			<div>
+				<h3 class="text-2xl font-light leading-tight md:pt-16">
+					Return on Investment
+				</h3>
+				<p>
+					Trade tokens as the value of 22X portfolio companies increase. Receive
+					proceeds from liquidity events.
+				</p>
+			</div>
+			<figure class="block mt-8">
+				<Image
+					src={HiWImage4}
+					alt=""
+					class="block"
+				/>
+			</figure>
+		</div>
+	</div>
+</div>
+
+<style>
+	@media (min-width: 768px) {
+		.hiw-figure img {
+			position: relative;
+			z-index: 20;
+		}
+
+		.hiw-figure::after {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 80%;
+			height: 300px;
+			z-index: 1;
+		}
+
+		.hiw-figure-1::after {
+			background: url("/hw-1_2.svg") no-repeat;
+			background-size: 100%;
+			right: 60%;
+			top: 70%;
+		}
+
+		.hiw-figure-2::after {
+			background: url("/hw-2_3.svg") no-repeat;
+			background-size: 100%;
+			left: 45%;
+			top: 65%;
+		}
+
+		.hiw-figure-3::after {
+			width: 57%;
+			background: url("/hw-3_4.svg") no-repeat;
+			background-size: 100%;
+			right: 55%;
+			top: 85%;
+		}
+	}
+</style>

@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+interface Props {
+	imagePath: string;
+	url: string;
+	title: string;
+}
+
+const { imagePath, url, title } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/companies/*.{jpeg,jpg,png,gif}"
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "src/assets/companies/*.{jpeg,jpg,png,gif}"`
+	);
+---
+
+<div
+	class="p-8 transition-all duration-500 bg-white rounded bg-opacity-10 hover:bg-opacity-0 active:shadow-inner active:bg-opacity-0"
+>
+	<a
+		href={url}
+		class="no-underline text-white font-normal uppercase tracking-extra-wide"
+	>
+		<figure class="block mb-4">
+			<Image
+				src={images[imagePath]()}
+				alt=""
+			/>
+		</figure>
+		{title}</a
+	>
+</div>

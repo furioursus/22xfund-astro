@@ -1,0 +1,73 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+	theme: {
+		extend: {
+			colors: {
+				transparent: "transparent",
+
+				black: "#22292f",
+				"grey-darkest": "#3d4852",
+				"grey-darker": "#606f7b",
+				"grey-dark": "#8795a1",
+				grey: "#b8c2cc",
+				"grey-light": "#dae1e7",
+				"grey-lighter": "#f1f5f8",
+				"grey-lightest": "#f8fafc",
+				white: "#ffffff",
+
+				viking: "#59D5E0",
+				fiord: "#41536E",
+				"pickled-bluewood": "#2C3B50",
+				"dodger-blue-light": "#40D8FF",
+				"dodger-blue": "#2FAEFF",
+				"havelock-blue": "#4A90E2",
+				"regent-gray": "#909AA6",
+				"shuttle-gray": "#5A6679",
+				mirage: "#1B232F",
+				zircon: "#f8fbff",
+			},
+			fontFamily: {
+				sans: [
+					"Open Sans",
+					"system-ui",
+					"BlinkMacSystemFont",
+					"-apple-system",
+					"Segoe UI",
+					"Roboto",
+					"Oxygen",
+					"Ubuntu",
+					"Cantarell",
+					"Fira Sans",
+					"Droid Sans",
+					"Helvetica Neue",
+					"sans-serif",
+				],
+				serif: [
+					"Constantia",
+					"Lucida Bright",
+					"Lucidabright",
+					"Lucida Serif",
+					"Lucida",
+					"DejaVu Serif",
+					"Bitstream Vera Serif",
+					"Liberation Serif",
+					"Georgia",
+					"serif",
+				],
+				mono: [
+					"Menlo",
+					"Monaco",
+					"Consolas",
+					"Liberation Mono",
+					"Courier New",
+					"monospace",
+				],
+			},
+			fontSize: {
+				"2xs": ".5rem",
+			},
+		},
+	},
+	plugins: [],
+};

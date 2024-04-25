@@ -1,0 +1,404 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import FaqHero from "../assets/hero-faq.png";
+import FaqImage from "../assets/faq-3.png";
+import LegalText from "../components/LegalText.astro";
+---
+
+<Layout
+	title="Frequently Asked Questions"
+	description=""
+>
+	<div class="relative flex w-full h-48 mb-24 bg-cover md:h-64">
+		<Image
+			src={FaqHero}
+			alt=""
+			class="absolute inset-0 z-10 object-cover object-top w-full h-full"
+		/>
+		<div class="container z-20 mx-auto">
+			<Image
+				src={FaqImage}
+				alt=""
+				class="absolute bottom-[-100px] right-4 max-w-[150px] sm:bottom-[-150px] sm:max-w-[220px] faq-hero-image"
+			/>
+		</div>
+	</div>
+	<div class="max-w-6xl px-8 mx-auto">
+		<h2 class="text-2xl font-light tracking-wide uppercase md:text-3xl">
+			Frequently Asked <br class="md:hidden" />Questions
+		</h2>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				How were the companies chosen?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					All 22X Fund companies are part of Batch 22 from 500 Startups which
+					took place in San Francisco in summer/fall of 2017. The 500 Startups
+					Accelerator has a ~2% acceptance rate. The majority have raised
+					previous funding and are revenue generating.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				What are investors receiving in return for purchasing 22X tokens?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Investors receive tokens in 22X which will own between 2.5% to 10% of
+					the equity in each 22X portfolio company. The final amount of equity
+					owned by 22X will be determined by the amount raised by 22X.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				How much is the fund raising?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>The target is $35M USD.</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Who decides how much each company gets?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Companies receive the same amount of money for the same valuation
+					based on how much in total is raised by 22X.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Is there money set aside for follow-on investments into these companies?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>No, there is not.</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				What was the valuation?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Every company in which 22X invests will have the same valuation of
+					$10m USD (post-money).
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				How is 22X compliant with SEC laws?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					22X is a private fund that is being offered pursuant to Section 506(c)
+					and is reliant on available exemptions under the Investment Company
+					Act.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Who is the Investment Advisor for 22X?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Securitize Capital LLC, a wholly owned subsidiary of Securitize Inc.,
+					is the investment manager to the Fund and will file with the relevant
+					regulatory in California as a private fund exempt adviser.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Can 22X tokens be traded?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Yes. To comply with various securities laws, US token holders will
+					have a lock-up period of 12 months, after which the token can be
+					traded subject to certain registration and AML/ KYC requirements.
+					Outside of the US, the token can be traded by Non-US people subject to
+					certain securities laws and country-specific considerations.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Can anybody invest in this like a typical ICO?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					The fund is limited to 100 U.S. accredited investors. Internationally,
+					limits on investors from each country will be imposed by securities
+					laws in each country.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				What is the minimum investment?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Minimum investment in the United States is $100k in the pre-sale and
+					$50K minimum investment in the main sale.
+				</p>
+				<p>
+					Minimum investment for investors outside of the United States is $10K
+					in the pre-sale and $5K in the main sale.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Are there bonuses available?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Yes, there are two potential bonuses. One is based on timing of the
+					investment and the other is based on the investment amount.
+				</p>
+				<div class="mt-4">Early Investment Bonus Schedule</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">$0m - $10m raised</div>
+					<div class="w-1/2">→ &nbsp;15% bonus</div>
+				</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">$10m - $20m raised</div>
+					<div class="w-1/2">→ &nbsp;10% bonus</div>
+				</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">$20m - $30m raised</div>
+					<div class="w-1/2">→ &nbsp;5% bonus</div>
+				</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">$30m - $35m raised</div>
+					<div class="w-1/2">→ &nbsp;0% bonus</div>
+				</div>
+				<div class="mt-4">Investment Amount Bonus Schedule</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">1m+</div>
+					<div class="w-1/2">→ &nbsp;15% bonus</div>
+				</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">$500k to $1m</div>
+					<div class="w-1/2">→ &nbsp;10% bonus</div>
+				</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">$100k to $500K</div>
+					<div class="w-1/2">→ &nbsp;5% bonus</div>
+				</div>
+				<div class="flex max-w-xs">
+					<div class="w-1/2">&gt; $100k</div>
+					<div class="w-1/2">→ &nbsp;0% bonus</div>
+				</div>
+				<p>
+					Bonuses are additive (i.e. $1MM invested within the first tier = 30%
+					bonus)
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				How do investors get returns?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					Investors can hold the 22X token and receive proceeds from liquidity
+					events for the companies in the portfolio. Or they may sell or trade
+					the token subject to compliance with securities regulations and other
+					applicable rules.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				How is this different from a typical ICO?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					22X is a security token offering backed by real assets i.e., equity
+					investments in Silicon Valley's top companies. It’s an opportunity for
+					investors to get a token that appreciates in value as companies mature
+					with a clearly defined underlying asset structure.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				How can people be sure the token is secure?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					22X Fund will only ever ask you for funds through the dashboard. The
+					dashboard application is deployed in an enterprise grade data center
+					and sits behind several layers of security. The dashboard application
+					itself has been independently penetration tested. Moreover, even if
+					the dashboard application were compromised, BTC and ETH funds are
+					sitting in cold wallets while fiat funds are sent directly from your
+					bank to ours. No funds are ever accessible via the dashboard or on the
+					internet.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				What is the process for buying 22X tokens with BTC or ETH?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>
+					For BTC and ETH, you send the funds to a unique address that we
+					provide to you. At this point there is no smart contract involved, so
+					we are relying on the raw Bitcoin and Ethereum protocol only. By now,
+					we think it's safe to consider that the two protocols have been proven
+					to be extremely resilient to attack in the wild (the “bounty” on both
+					the Bitcoin and Ethereum protocols as of the time of writing are
+					around $220 and $70 billion, respectively, so we can assume that the
+					protocols are reasonably secure). What this means is that BTC/ETH
+					security boils down to whether or not the private keys for each
+					address are compromised. The private keys for the receiving addresses
+					are stored completely offline in a multi-sig escrow service. Therefore
+					there is no need to worry about funds being compromised in a smart
+					contract at the point of funding provision.
+				</p>
+				<p>
+					Subsequent to the sale close, we will then issue ERC-20 tokens
+					commensurate with the funds provided and the total amount of tokens
+					outstanding. This will be a fairly simple ERC-20 contract that is
+					designed to provide tokens equivalent to the right to dividends in the
+					underlying 22x Fund as well as eventually the right to trade these
+					tokens once they become liquid. The token will correspond to a token
+					wallet to which you hold the private keys.
+				</p>
+			</div>
+		</div>
+		<div class="mb-12">
+			<h3 class="mt-4 mb-1 text-lg font-light md:text-2xl">
+				Who do I contact if I want to do a story on 22X?
+			</h3>
+			<div
+				class="pl-4 ml-2 text-sm leading-loose border-l-2 border-dodger-blue md:text-base"
+			>
+				<p>Official communications channels are:</p>
+				<ul class="italic font-normal">
+					<li>
+						Website:
+						<a
+							href="../index.html"
+							class="no-underline text-pickled-bluewood"
+							>www.22Xfund.com</a
+						>
+					</li>
+					<li>
+						Twitter:
+						<a
+							href="https://www.twitter.com/22xtoken"
+							class="no-underline text-pickled-bluewood"
+							>@22xtoken</a
+						>
+					</li>
+					<li>
+						Telegram:
+						<a
+							href="https://t.me/community22X"
+							class="no-underline text-pickled-bluewood"
+							>community22x</a
+						>
+					</li>
+					<li>
+						Press:
+						<a
+							href="mailto:press@22xfund.com"
+							class="no-underline text-pickled-bluewood"
+							>press@22xfund.com</a
+						>
+					</li>
+					<li>
+						Investor deck, Roadmap, and other documents: Please register on the
+						website to view investor information.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="px-8 pt-16 mx-auto -mt-1 text-center max-w-8xl">
+		<LegalText />
+	</div>
+</Layout>
+
+<style>
+	.faq-hero {
+		width: 100%;
+		min-height: 150px;
+		height: 30vh;
+		background: url("/assets/img/hero-faq.png") center -20px no-repeat #fff;
+		background-size: cover;
+		position: relative;
+		margin-bottom: 100px;
+	}
+
+	.faq-hero-image {
+		position: absolute;
+		bottom: -100px;
+		right: 16px;
+		max-width: 150px;
+	}
+
+	@media (min-width: 576px) {
+		.faq-hero-image {
+			bottom: -150px;
+			max-width: 220px;
+		}
+	}
+
+	.faq-item {
+		@apply mb-12;
+	}
+
+	.faq-question {
+		@apply font-light text-lg mt-4 mb-1;
+	}
+
+	.faq-answer {
+		@apply ml-2 pl-4 border-l-2 border-dodger-blue leading-loose text-sm;
+	}
+</style>

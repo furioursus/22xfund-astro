@@ -1,0 +1,21 @@
+---
+import LegalText from "./LegalText.astro";
+---
+
+<a
+	id="legal"
+	class="relative block invisible top-[-5rem]"
+></a>
+<div
+	class="px-8 pt-16 mx-auto -mt-1 text-center bg-white bg-top bg-no-repeat max-w-8xl legal-bg md:pt-32"
+>
+	<LegalText />
+</div>
+
+<style>
+	.legal-bg {
+		background-image: url(/pickled-bluewood-edge-reverse.svg);
+		background-size: 105%;
+		background-color: #fff;
+	}
+</style>

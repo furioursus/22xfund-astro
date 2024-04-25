@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import AccessImage from "../assets/access.svg";
+import QualityImage from "../assets/quality.svg";
+import ReturnsImage from "../assets/returns.svg";
+---
+
+<a
+	id="next-evolution"
+	class="relative block invisible top-[-5rem]"
+></a>
+<div class="py-12 mx-auto -mt-1 max-w-8xl bg-zircon">
+	<div class="container px-8 mx-auto">
+		<h2 class="text-3xl font-light tracking-wide uppercase sm:text-center">
+			The Next Evolution in Startup Investing
+		</h2>
+		<div class="mt-12 text-center">
+			<div class="md:flex">
+				<div class="mb-12">
+					<h3 class="mb-12 text-2xl font-light">Access</h3>
+					<figure class="inline-flex items-center w-32 mb-6 md:h-40">
+						<Image
+							src={AccessImage}
+							alt=""
+							class="block w-32"
+						/>
+					</figure>
+					<p class="px-4 text-lg leading-loose">
+						The first tokenized opportunity to invest in a group of pre-vetted
+						early stage startups.
+					</p>
+				</div>
+				<div class="mb-12">
+					<h3 class="mb-12 text-2xl font-light">Quality</h3>
+					<figure class="inline-flex items-center w-32 mb-6 md:h-40">
+						<Image
+							src={QualityImage}
+							alt=""
+							class="block w-32"
+						/>
+					</figure>
+					<p class="px-4
+							text-lg
+							leading-loose">
+						~2% acceptance rate for companies chosen for the 500 Startups
+						Accelerator program.
+					</p>
+				</div>
+				<div class="mb-12">
+					<h3 class="mb-12 text-2xl font-light">Returns</h3>
+					<figure class="inline-flex items-center w-32 mb-6 md:h-40">
+						<Image
+							src={ReturnsImage}
+							alt=""
+							class="block w-32"
+						/>
+					</figure>
+					<p class="px-4 text-lg leading-loose">
+						Get proceeds from the startups as they grow, exit, or IPO, or trade
+						the 22X Fund token.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,141 @@
+---
+import CompaniesCard from "./CompaniesCard.astro";
+let offerings = [
+	{
+		url: "https://www.helpergo.co/",
+		imagePath: "/src/assets/companies/agentbong.png",
+		title: "Agent Bong",
+	},
+	{
+		url: "https://www.projectcor.com/",
+		imagePath: "/src/assets/companies/cor.png",
+		title: "COR",
+	},
+	{
+		url: "https://www.fincheck.com/",
+		imagePath: "/src/assets/companies/fincheck.png",
+		title: "Fincheck",
+	},
+	{
+		url: "https://www.freightroll.com/",
+		imagePath: "/src/assets/companies/freightroll.png",
+		title: "FreightRoll",
+	},
+	{
+		url: "https://www.fyodorbio.com/",
+		imagePath: "/src/assets/companies/fyodor.png",
+		title: "FyodorBio",
+	},
+	{
+		url: "http://www.koinbros.com/",
+		imagePath: "/src/assets/companies/KoinbrosLogo.png",
+		title: "Koinbros",
+	},
+	{
+		url: "https://www.mailhaven.co/",
+		imagePath: "/src/assets/companies/mailhaven.png",
+		title: "MailHaven",
+	},
+	{
+		url: "https://www.mobileforms.co/",
+		imagePath: "/src/assets/companies/mobileforms.png",
+		title: "mobileForms",
+	},
+	{
+		url: "https://www.myndlift.com/",
+		imagePath: "/src/assets/companies/myndlift.png",
+		title: "Myndlift",
+	},
+	{
+		url: "https://www.quantyzed.com/",
+		imagePath: "/src/assets/companies/quantyzed-white.png",
+		title: "Quantyzed",
+	},
+	{
+		url: "https://www.redock.com/",
+		imagePath: "/src/assets/companies/redock.png",
+		title: "reDock",
+	},
+	{
+		url: "https://www.rever.co/",
+		imagePath: "/src/assets/companies/rever.png",
+		title: "Rever",
+	},
+	{
+		url: "https://www.shortpoint.com/",
+		imagePath: "/src/assets/companies/shortpoint.png",
+		title: "shortpoint",
+	},
+	{
+		url: "https://www.texelvr.com/",
+		imagePath: "/src/assets/companies/texel.png",
+		title: "Texel",
+	},
+	{
+		url: "https://www.vcv.ai/",
+		imagePath: "/src/assets/companies/vcv.png",
+		title: "VCV",
+	},
+];
+---
+
+<a
+	id="companies"
+	class="anchor-link"
+></a>
+<div class="text-white text-center mt-8 px-8 md:mt-24">
+	<h2 class="text-3xl mb-4 font-light uppercase tracking-wide md:text-4xl">
+		The Companies
+	</h2>
+	<p class="text-sm max-w-sm mx-auto md:text-base">
+		Selected for their growth potential, 22X Fund companies are geographically
+		and industrially diverse and tackling multi-billion dollar markets.
+	</p>
+	<div class="container mx-auto company-grid my-8 sm:mb-24">
+		{
+			offerings.map(({ title, imagePath, url }) => (
+				<CompaniesCard
+					title={title}
+					imagePath={imagePath}
+					url={url}
+				/>
+			))
+		}
+	</div>
+</div>
+
+<style>
+	.company-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 12px;
+	}
+
+	@media (min-width: 576px) {
+		.company-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 992px) {
+		.company-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.company-grid > * {
+		background-color: rgba(255, 255, 255, 0.14);
+		transition:
+			background-color 0.5s,
+			box-shadow 0.5s;
+	}
+
+	.company-grid > *:hover {
+		background-color: transparent;
+	}
+
+	.company-grid > *:active {
+		@apply shadow-inner;
+		background-color: transparent;
+	}
+</style>

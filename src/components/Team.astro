@@ -1,0 +1,179 @@
+---
+import TeamCard from "./TeamCard.astro";
+import SecuritizeLogo from "../assets/logo-securitize-white.png";
+import { Image } from "astro:assets";
+let fundManagement = [
+	{
+		nameFirst: "Richard",
+		nameLast: "Titus",
+		title: "Portfolio Manager",
+		image: "/src/assets/team/richard-titus.png",
+		linkedin: "https://www.linkedin.com/in/rxdxt/",
+	},
+	{
+		nameFirst: "Jamie",
+		nameLast: "Finn",
+		title: "Portfolio Manager",
+		image: "/src/assets/team/jamie-finn.png",
+		linkedin: "https://www.linkedin.com/in/jamesfinn/",
+	},
+];
+let coreFounders = [
+	{
+		nameFirst: "Ashwini",
+		nameLast: "Anburajan",
+		title: "Head of WeWork Labs - Tri-State + Consumer",
+		image: "/src/assets/team/ashwini-anburajan.png",
+		linkedin: "https://www.linkedin.com/in/aanburajan",
+	},
+	{
+		nameFirst: "Ayush",
+		nameLast: "Khanna",
+		title: "COO, LaborVoices",
+		image: "/src/assets/team/khanna1.jpg",
+		linkedin: "https://www.linkedin.com/in/ayushk/",
+	},
+	{
+		nameFirst: "Chris",
+		nameLast: "Rawlings",
+		title: "CEO, Sophie Society Co.",
+		image: "/src/assets/team/0-1.jpg",
+		linkedin: "https://www.linkedin.com/in/chris-rawlings-a4042260",
+	},
+	{
+		nameFirst: "Jake",
+		nameLast: "Koppinger",
+		title: "CEO, Freightroll",
+		image: "/src/assets/team/koppinger1.jpg",
+		linkedin: "https://www.linkedin.com/in/jake-koppinger-9832b417/",
+	},
+	{
+		nameFirst: "Justin",
+		nameLast: "Bradshaw",
+		title: "Co-Founder, REVER",
+		image: "/src/assets/team/bradshaw.jpg",
+		linkedin: "https://www.linkedin.com/in/justin-bradshaw-34785445/",
+	},
+	{
+		nameFirst: "Ruth",
+		nameLast: "Polachek",
+		title: "CEO, Fincheck",
+		image: "/src/assets/team/polachek1.jpg",
+		linkedin: "https://www.linkedin.com/in/rutipo/",
+	},
+];
+let advisors = [
+	{
+		nameFirst: "Adam",
+		nameLast: "Traidman",
+		title: "CEO, Breadwallet",
+		image: "/src/assets/team/adam.jpg",
+		linkedin: "https://www.linkedin.com/in/adamtraidman/",
+	},
+	{
+		nameFirst: "Gabriel",
+		nameLast: "Zanko",
+		title: "Fintech Entrepreneur & Advisor",
+		image: "/src/assets/team/zanko.jpg",
+		linkedin: "https://www.linkedin.com/in/gabrielzanko/",
+	},
+	{
+		nameFirst: "Anthony",
+		nameLast: "Pompliano",
+		title: "Anthony Pompliano",
+		image: "/src/assets/team/pompeo.jpg",
+		linkedin: "https://www.linkedin.com/in/gabrielzanko/",
+	},
+];
+---
+
+<a
+	id="team"
+	class="relative block invisible top-[-5rem]"
+></a>
+<div class="container px-1 py-24 mx-auto text-center rounded">
+	<h2 class="text-xl font-normal text-center text-viking">
+		22X Fund Management
+	</h2>
+	<div class="mx-auto md:max-w-3xl">
+		<div class="flex flex-wrap justify-center w-full py-10 profiles">
+			{
+				fundManagement.map(
+					({ nameFirst, nameLast, image, linkedin, title }) => (
+						<TeamCard
+							nameFirst={nameFirst}
+							nameLast={nameLast}
+							imagePath={image}
+							jobTitle={title}
+							url={linkedin}
+						/>
+					)
+				)
+			}
+		</div>
+	</div>
+	<h2 class="text-xl font-normal text-center text-viking">22X Core Founders</h2>
+	<div class="mx-auto md:max-w-3xl">
+		<div class="flex flex-wrap justify-center w-full py-10 profiles">
+			{
+				coreFounders.map(({ nameFirst, nameLast, image, linkedin, title }) => (
+					<TeamCard
+						nameFirst={nameFirst}
+						nameLast={nameLast}
+						imagePath={image}
+						jobTitle={title}
+						url={linkedin}
+					/>
+				))
+			}
+		</div>
+	</div>
+	<h2 class="text-xl font-normal text-center text-viking">22X Advisors</h2>
+	<div class="mx-auto md:max-w-3xl">
+		<div class="flex flex-wrap justify-center w-full py-10 profiles">
+			{
+				advisors.map(({ nameFirst, nameLast, image, linkedin, title }) => (
+					<TeamCard
+						nameFirst={nameFirst}
+						nameLast={nameLast}
+						imagePath={image}
+						jobTitle={title}
+						url={linkedin}
+					/>
+				))
+			}
+		</div>
+	</div>
+	<h2 class="text-xl font-normal text-center text-viking">Partners</h2>
+	<div class="inline-flex justify-center pt-10">
+		<a
+			href="https://www.securitize.io"
+			class="inline-block"
+		>
+			<Image
+				src={SecuritizeLogo}
+				alt="Securitize Logo"
+				class="block w-48"
+				loading="lazy"
+			/>
+		</a>
+	</div>
+</div>
+
+<style>
+	.profiles {
+		max-width: 284px;
+	}
+
+	@media (min-width: 576px) {
+		.profiles {
+			max-width: 568px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.profiles {
+			max-width: 726px;
+		}
+	}
+</style>

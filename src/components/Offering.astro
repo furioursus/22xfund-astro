@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import Companies from "./Companies.astro";
+import TeamPhoto from "../assets/team-photo.jpg";
+---
+
+<figure class="block">
+	<Image
+		src={TeamPhoto}
+		alt="Photo of the 22X Team!"
+		class="block w-full max-w-5xl mx-auto"
+	/>
+</figure>
+<a
+	id="offering"
+	class="anchor-link"
+></a>
+<div class="px-2 pt-4 pb-16 mx-auto max-w-8xl linear-dodger-gradient">
+	<div
+		class="max-w-4xl px-8 py-12 mx-auto bg-white rounded shadow-lg md:grid md:grid-cols-2 md:p-16 md:gap-8"
+	>
+		<div>
+			<h2
+				class="text-3xl font-light leading-none tracking-wide uppercase md:text-4xl md:w-1/2"
+			>
+				The Offering
+			</h2>
+			<p class="mt-6 mb-8 text-sm md:mb-0 md:text-xl">
+				Invest in 22X Fund and <b>own up to 10% equity</b> in the current batch of
+				500 Startups Companies
+			</p>
+		</div>
+		<div class="text-xs font-normal md:text-sm md:leading-loose">
+			<p class="mt-4">
+				Invest in the 22nd Batch of 500 Startups companies through 22X Fund. 500
+				Startups is a global venture capital seed fund with a well-known
+				accelerator program headquartered in Silicon Valley.
+			</p>
+			<p class="mt-4">
+				The 500 Startups Accelerator has a ~2% acceptance rate.
+			</p>
+		</div>
+	</div>
+	<Companies />
+</div>
+
+<style>
+	.linear-dodger-gradient {
+		background-image: url("/offering-edge.svg"), url("/company-edge.svg"),
+			linear-gradient(to bottom, #40d8ff 0%, #2faeff 100%);
+		background-position:
+			top,
+			bottom,
+			top left;
+		background-size: 102%;
+		background-repeat: no-repeat;
+	}
+</style>

@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "../assets/hero.png";
+import HeroEdge from "../assets/hero-edge.svg";
+import Notification from "./Notification.astro";
+---
+
+<Notification />
+<a
+	id="hero"
+	class="relative block invisible top-[-5rem]"
+></a>
+<div class="flex items-center mx-auto max-w-8xl h-[50vh] relative">
+	<div class="absolute bottom-0 z-20 w-full h-2 bg-white"></div>
+	<Image
+		src={HeroEdge}
+		class="absolute inset-0 z-20 object-cover w-full h-full"
+		alt=""
+	/>
+	<Image
+		src={HeroImage}
+		class="absolute inset-0 z-10 object-cover w-full h-full home-hero-image"
+		alt=""
+	/>
+	<div class="container relative z-30 max-w-xl p-8 mx-auto text-fiord">
+		<h1
+			class="mb-4 text-2xl font-light tracking-tight uppercase md:mb-0 md:text-4xl md:leading-none md:-mt-12"
+		>
+			Invest in the Best <br class="hidden md:block" />Silicon Valley Startups
+		</h1>
+		<p class="text-lg font-bold md:text-2xl">
+			One Token, Silicon Valley’s Top Startups.
+		</p>
+	</div>
+</div>
