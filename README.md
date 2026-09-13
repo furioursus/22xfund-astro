@@ -126,6 +126,26 @@ honouring markup that version 3 silently ignored, so the markup was left as writ
 Everything else renders pixel-for-pixel identically at 1440px and 390px widths, verified
 by screenshot comparison against the pre-upgrade build.
 
+## Deployment
+
+Hosted on Netlify as the `22xfund-work` project, under the same
+`*.work.furioursus.dev` convention as the other work-sample sites.
+
+`netlify.toml` holds the build settings, so a Netlify project linked to this
+repository needs no configuration in the dashboard:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+```
+
+`NODE_VERSION` is pinned to 22 there for the same reason CI pins it — Astro 7's
+engine floor is 22.12.0, and Netlify's default image may be older.
+
+Because the build command is `astro check && astro build`, a type error fails the
+deploy rather than shipping a broken build.
+
 ## Known issues
 
 These predate the upgrade and are unchanged by it:
