@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. In Tailwind v4 the theme lives here in CSS rather than in a
+ * JavaScript config file; every custom property below generates the matching
+ * utility classes (e.g. --color-viking gives you bg-viking, text-viking,
+ * border-viking).
+ */
+@theme {
+	/* Neutrals */
+	--color-black: #22292f;
+	--color-grey-darkest: #3d4852;
+	--color-grey-darker: #606f7b;
+	--color-grey-dark: #8795a1;
+	--color-grey: #b8c2cc;
+	--color-grey-light: #dae1e7;
+	--color-grey-lighter: #f1f5f8;
+	--color-grey-lightest: #f8fafc;
+	--color-white: #ffffff;
+
+	/* Brand */
+	--color-viking: #59d5e0;
+	--color-fiord: #41536e;
+	--color-pickled-bluewood: #2c3b50;
+	--color-dodger-blue-light: #40d8ff;
+	--color-dodger-blue: #2faeff;
+	--color-havelock-blue: #4a90e2;
+	--color-regent-gray: #909aa6;
+	--color-shuttle-gray: #5a6679;
+	--color-mirage: #1b232f;
+	--color-zircon: #f8fbff;
+
+	/* Typography */
+	--font-sans: "Open Sans", system-ui, BlinkMacSystemFont, -apple-system,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	--font-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif",
+		Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia,
+		serif;
+	--font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+		monospace;
+
+	--text-2xs: 0.5rem;
+}
