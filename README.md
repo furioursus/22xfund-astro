@@ -3,11 +3,18 @@
 An Astro rebuild of the 22X Token marketing site — a static, zero-JavaScript-by-default
 site with two routes (`/` and `/faq`).
 
-This is a portfolio reproduction, not a live site. `PortfolioDisclaimer.astro`
-renders a sitewide banner above the navigation saying so, and the investor call to
-action in `Notification.astro` has been replaced with inert text. Note that the
-banner sits in normal document flow, which is why the navigation uses `sticky
-top-0` rather than `fixed` — a fixed nav would render on top of it.
+This is a portfolio reproduction, not a live site. Three things enforce that:
+
+- `PortfolioDisclaimer.astro` renders a sitewide banner above the navigation saying so.
+  It sits in normal document flow, which is why the navigation uses `sticky top-0`
+  rather than `fixed` — a fixed nav would render on top of it.
+- The investor call to action in `Notification.astro` is inert text rather than a link.
+- In `Navigation.astro`, a `null` `link` renders that item as a disabled `<span>`
+  instead of an anchor. "Register Here" and "Login" use it, since both originally
+  pointed at live Securitize authorization flows.
+
+No page in the built output contains an `id.securitize.io` URL. The only remaining
+reference is the plain company link to `www.securitize.io` in `Team.astro`.
 
 ## Stack
 
@@ -163,9 +170,6 @@ These predate the upgrade and are unchanged by it:
 - `tracking-extra-wide` in `src/components/CompaniesCard.astro` is likewise undefined.
 - `.faq-item`, `.faq-question` and `.faq-answer` in `src/pages/faq.astro` are dead — the
   markup applies those utilities inline instead.
-- The "Register Here" and "Login" items in `src/components/Navigation.astro` still point
-  at live Securitize authorization URLs. They are held in a JavaScript array rather than
-  as `href` attributes, so a grep for outbound links misses them.
 
 ## Learn more
 
